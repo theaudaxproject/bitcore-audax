@@ -40,7 +40,7 @@ export class Address {
   static Bitcore = {
     btc: require('bitcore-lib'),
     bch: require('bitcore-lib-cash'),
-    mue: require('bitcore-lib-mue2')
+    audax: require('bitcore-audax-lib')
   };
 
   static create(opts) {

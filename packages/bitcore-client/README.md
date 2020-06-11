@@ -35,7 +35,7 @@ To create a wallet to point to local bitcore-node.
 ```
 OR
 ```sh
-./wallet-create --name myregtestwallet --chain MUE --network regtest --baseUrl http://localhost:3000/api
+./wallet-create --name myregtestwallet --chain AUDAX --network regtest --baseUrl http://localhost:3000/api
 ```
 
 ### Register an Existing Wallet

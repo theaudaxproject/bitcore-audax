@@ -138,7 +138,7 @@ export class HomePage {
           }
         }
       },
-      mue: {
+      audax: {
         name: 'Bitcore',
         historicalRates: [],
         dailyTransactionCounts: [],

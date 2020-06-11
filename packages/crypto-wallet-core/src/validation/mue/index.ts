@@ -1,17 +1,17 @@
 import { IValidation } from '..';
-const BitcoreMue = require('bitcore-lib-mue2');
+const BitcoreAudax = require('bitcore-audax-lib');
 
-export class MueValidation implements IValidation {
+export class AudaxValidation implements IValidation {
   validateAddress(network: string, address: string): boolean {
-    const AddressMue = BitcoreMue.Address;
-    // Regular Address: try Bitcoin MUE
-    return AddressMue.isValid(address, network);
+    const AddressAudax = BitcoreAudax.Address;
+    // Regular Address: try Bitcoin AUDAX
+    return AddressAudax.isValid(address, network);
   }
 
   validateUri(addressUri: string): boolean {
     // Check if the input is a valid uri or address
-    const URIMue = BitcoreMue.URI;
+    const URIAudax = BitcoreAudax.URI;
     // Bip21 uri
-    return URIMue.isValid(addressUri);
+    return URIAudax.isValid(addressUri);
   }
 }

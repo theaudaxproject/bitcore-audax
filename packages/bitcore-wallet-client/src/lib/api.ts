@@ -20,7 +20,7 @@ var Bitcore = CWC.BitcoreLib;
 var Bitcore_ = {
   btc: CWC.BitcoreLib,
   bch: CWC.BitcoreLibCash,
-  mue: CWC.BitcoreLibMue,
+  audax: CWC.BitcoreLibAudax,
   eth: CWC.BitcoreLib
 };
 var Mnemonic = require('bitcore-mnemonic');
@@ -2492,12 +2492,12 @@ export class API extends EventEmitter {
         // coin, network,  multisig
         ['btc', 'livenet'],
         ['bch', 'livenet'],
-        ['mue', 'livenet'],
+        ['audax', 'livenet'],
         ['eth', 'livenet'],
         ['eth', 'testnet'],
         ['btc', 'livenet', true],
         ['bch', 'livenet', true],
-        ['mue', 'livenet', true]
+        ['audax', 'livenet', true]
       ];
       if (key.use44forMultisig) {
         //  testing old multi sig

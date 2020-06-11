@@ -1,5 +1,5 @@
-export class MUETxProvider {
-  lib = require('bitcore-lib-mue2');
+export class AUDAXTxProvider {
+  lib = require('bitcore-audax-lib');
   create({ recipients, utxos, change, fee }) {
     let tx = new this.lib.Transaction().from(utxos).fee(Number(fee));
     for (const recipient of recipients) {

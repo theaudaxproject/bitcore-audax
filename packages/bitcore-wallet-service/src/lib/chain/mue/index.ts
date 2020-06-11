@@ -1,17 +1,17 @@
-import { BitcoreLibMue } from 'crypto-wallet-core';
+import { BitcoreLibAudax } from 'crypto-wallet-core';
 import _ from 'lodash';
 import { IChain } from '..';
 import { BtcChain } from '../btc';
 
 const Errors = require('../../errors/errordefinitions');
 
-export class MueChain extends BtcChain implements IChain {
+export class AudaxChain extends BtcChain implements IChain {
   constructor() {
-    super(BitcoreLibMue);
+    super(BitcoreLibAudax);
   }
 
   validateAddress(wallet, inaddr, opts) {
-    const A = BitcoreLibMue.Address;
+    const A = BitcoreLibAudax.Address;
     let addr: {
       network?: string;
       toString?: (cashAddr: boolean) => string;

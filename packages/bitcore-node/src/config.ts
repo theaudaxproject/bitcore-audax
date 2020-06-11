@@ -102,15 +102,15 @@ const Config = function(): ConfigType {
           }
         }
       },
-      MUE: {
+      AUDAX: {
         mainnet: {
           chainSource: 'p2p',
-          trustedPeers: [{ host: '127.0.0.1', port: 19687 }],
+          trustedPeers: [{ host: '127.0.0.1', port: 18200 }],
           rpc: {
             host: '127.0.0.1',
-            port: 20102,
-            username: 'mue',
-            password: 'mue'
+            port: 18201,
+            username: 'audax',
+            password: 'audax'
           }
         }
       }

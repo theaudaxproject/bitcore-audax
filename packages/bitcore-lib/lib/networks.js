@@ -139,19 +139,17 @@ function removeNetwork(network) {
 addNetwork({
   name: 'livenet',
   alias: 'mainnet',
-  pubkeyhash: 0x10,
-  privatekey: 0x7e,
-  scripthash: 0x4c,
-  xpubkey: 0x022d2533,
-  xprivkey: 0x0221312b,
-  networkMagic: 0x91c4fdea,
-  port: 19687,
+  pubkeyhash: 0x17,
+  privatekey: 0x8E,
+  scripthash: 0x08,
+  xpubkey: 0x022D2533,
+  xprivkey: 0x0221312B,
+  networkMagic: 0x92c5e6d4,
+  port: 18200,
   dnsSeeds: [
-    'dns1.monetaryunit.org',
-    'dns2.monetaryunit.org',
-    'dns3.monetaryunit.org'
+    '149.28.8.136'
   ],
-  bech32prefix: 'mue'
+  bech32prefix: 'bo'
 });
 
 /**

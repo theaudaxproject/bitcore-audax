@@ -48,12 +48,12 @@ module.exports = {
         url: 'https://api.bitcore.io',
       },
     },
-    mue: {
+    audax: {
       livenet: {
-        url: 'https://api.monetaryunit.org',
+        url: 'https://api.audaxproject.io',
       },
       testnet: {
-        url: 'https://api.monetaryunit.org',
+        url: 'https://api.audaxproject.io',
       },
     },
     eth: {

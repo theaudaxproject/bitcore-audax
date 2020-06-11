@@ -77,7 +77,7 @@ Set up your bitcore.config.json file in ./bitcore
           }
         }
       }
-      "MUE": {
+      "AUDAX": {
         "mainnet": {
           "parentChain": "BTC",
           "forkHeight": 492820,

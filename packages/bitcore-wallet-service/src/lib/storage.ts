@@ -15,7 +15,7 @@ import {
   Wallet
 } from './model';
 
-const MUEAddressTranslator = require('./mueaddresstranslator'); // only for migration
+const AUDAXAddressTranslator = require('./audaxaddresstranslator'); // only for migration
 const $ = require('preconditions').singleton();
 let log = require('npmlog');
 log.debug = log.verbose;
@@ -602,7 +602,7 @@ export class Storage {
       cursor.pause();
       let x;
       try {
-        x = MUEAddressTranslator.translate(doc.address, 'cashaddr');
+        x = AUDAXAddressTranslator.translate(doc.address, 'cashaddr');
       } catch (e) {
         return cb(e);
       }

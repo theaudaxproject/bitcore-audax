@@ -16,12 +16,12 @@ export interface NetworkSettings {
 }
 
 const CurrentEnv = process.env.ENV || 'dev';
-const MueApiPrefix = process.env.API_PREFIX;
+const AudaxApiPrefix = process.env.API_PREFIX;
 
 const EnvApiHosts: { [env: string]: { [chain: string]: string } } = {
   prod: {
     default: 'https://api.bitcore.io/api',
-    MUE: MueApiPrefix,
+    AUDAX: AudaxApiPrefix,
     ETH: 'https://api-eth.bitcore.io/api'
   },
   dev: { default: '/api' }
@@ -44,7 +44,7 @@ export class ApiProvider {
   public ratesAPI = {
     btc: 'https://bitpay.com/api/rates',
     bch: 'https://bitpay.com/api/rates/bch',
-    mue: 'https://bitpay.com/api/rates/mue',
+    audax: 'https://bitpay.com/api/rates/audax',
     eth: 'https://bitpay.com/api/rates/eth'
   };
 

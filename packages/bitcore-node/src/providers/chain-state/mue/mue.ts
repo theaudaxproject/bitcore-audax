@@ -1,8 +1,8 @@
 import { BTCStateProvider } from '../btc/btc';
 import { CSP } from '../../../types/namespaces/ChainStateProvider';
 
-export class MUEStateProvider extends BTCStateProvider {
-  constructor(chain: string = 'MUE') {
+export class AUDAXStateProvider extends BTCStateProvider {
+  constructor(chain: string = 'AUDAX') {
     super(chain);
   }
 

@@ -9,7 +9,7 @@
       }
     },
     "chains": {
-      "MUE": {
+      "AUDAX": {
         "mainnet": {
           "chainSource": "p2p",
           "trustedPeers": [
@@ -21,8 +21,8 @@
           "rpc": {
             "host": "127.0.0.1",
             "port": 40009,
-            "username": "mue",
-            "password": "mue"
+            "username": "audax",
+            "password": "audax"
           }
         }
       }

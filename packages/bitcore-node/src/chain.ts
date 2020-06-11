@@ -7,8 +7,8 @@ module.exports = {
     lib: require('bitcore-lib-cash'),
     p2p: require('bitcore-p2p-cash'),
   },
-  MUE: {
-    lib: require('bitcore-lib-mue2'),
-    p2p: require('bitcore-p2p-mue'),
+  AUDAX: {
+    lib: require('bitcore-audax-lib'),
+    p2p: require('bitcore-audax-p2p'),
   },
 }

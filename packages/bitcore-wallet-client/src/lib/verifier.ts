@@ -2,11 +2,11 @@ import * as _ from 'lodash';
 import { Constants, Utils } from './common';
 var $ = require('preconditions').singleton();
 
-import { BitcoreLib, BitcoreLibMue, BitcoreLibCash } from 'crypto-wallet-core';
+import { BitcoreLib, BitcoreLibAudax, BitcoreLibCash } from 'crypto-wallet-core';
 
 var Bitcore = BitcoreLib;
 var BCHAddress = BitcoreLibCash.Address;
-var MUEAddress = BitcoreLibMue.Address;
+var AUDAXAddress = BitcoreLibAudax.Address;
 
 var log = require('./log');
 
@@ -189,7 +189,7 @@ export class Verifier {
     if (txp.coin == 'bch' && (new BCHAddress(toAddress).toString()) != (new BCHAddress(payproOpts.instructions[0].toAddress).toString()))
       return false;
 
-    if (txp.coin == 'mue' && (new MUEAddress(toAddress).toString()) != (new MUEAddress(payproOpts.instructions[0].toAddress).toString()))
+    if (txp.coin == 'audax' && (new AUDAXAddress(toAddress).toString()) != (new AUDAXAddress(payproOpts.instructions[0].toAddress).toString()))
       return false;
 
     // this generates problems...

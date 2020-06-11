@@ -1,5 +1,5 @@
 
-import { BitcoreLib, BitcoreLibMue, BitcoreLibCash } from 'crypto-wallet-core';
+import { BitcoreLib, BitcoreLibAudax, BitcoreLibCash } from 'crypto-wallet-core';
 
 var $ = require('preconditions').singleton();
 const URL = require('url');
@@ -10,7 +10,7 @@ const Errors = require('./errors');
 var Bitcore_ = {
   btc: Bitcore,
   bch: BitcoreLibCash,
-  mue: BitcoreLibMue
+  audax: BitcoreLibAudax
 };
 // const request = require('request');
 const JSON_PAYMENT_REQUEST_CONTENT_TYPE = 'application/payment-request';

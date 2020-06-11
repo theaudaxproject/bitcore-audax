@@ -18,7 +18,7 @@ var Bitcore = require('bitcore-lib');
 var Bitcore_ = {
   btc: Bitcore,
   bch: require('bitcore-lib-cash'),
-  mue: require('bitcore-lib-mue2'),
+  audax: require('bitcore-audax-lib'),
 };
 
 var { ChainService } = require('../../ts_build/lib/chain/index');
@@ -195,7 +195,7 @@ helpers._generateCopayersTestData = function() {
     var xpub_44H_0H_0H = Bitcore.HDPublicKey(xpriv_44H_0H_0H);
     var id44btc = Model.Copayer._xPubToCopayerId('btc', xpub_44H_0H_0H.toString());
     var id44bch = Model.Copayer._xPubToCopayerId('bch', xpub_44H_0H_0H.toString());
-    var id44mue = Model.Copayer._xPubToCopayerId('mue', xpub_44H_0H_0H.toString());
+    var id44audax = Model.Copayer._xPubToCopayerId('audax', xpub_44H_0H_0H.toString());
 
     var xpriv_1H = xpriv.deriveChild(1, true);
     var xpub_1H = Bitcore.HDPublicKey(xpriv_1H);
@@ -204,7 +204,7 @@ helpers._generateCopayersTestData = function() {
 
     console.log('{id44btc: ', "'" + id44btc + "',");
     console.log('id44bch: ', "'" + id44bch + "',");
-    console.log('id44mue: ', "'" + id44mue + "',");
+    console.log('id44audax: ', "'" + id44audax + "',");
     console.log('id45: ', "'" + id45 + "',");
     console.log('xPrivKey: ', "'" + xpriv.toString() + "',");
     console.log('xPubKey: ', "'" + xpub.toString() + "',");

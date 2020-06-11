@@ -14,7 +14,7 @@ import { MongoBound } from '../../../src/models/base';
 
 describe('Block Model', function() {
   let addBlockParams = {
-    chain: 'MUE',
+    chain: 'AUDAX',
     network: 'mainnet',
     block: TEST_BLOCK,
     height: 1355,
@@ -91,7 +91,7 @@ describe('Block Model', function() {
     });
     it('should return the new tip', async () => {
       mockStorage(null);
-      const params = { chain: 'MUE', network: 'mainnet' };
+      const params = { chain: 'AUDAX', network: 'mainnet' };
       const result = await ChainStateProvider.getLocalTip(params);
       expect(result!.height).to.deep.equal(addBlockParams.height + 1);
       expect(result!.chain).to.deep.equal(addBlockParams.chain);

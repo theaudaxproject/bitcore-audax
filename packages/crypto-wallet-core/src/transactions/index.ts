@@ -2,13 +2,13 @@ import { BCHTxProvider } from './bch';
 import { BTCTxProvider } from './btc';
 import { ERC20TxProvider } from './erc20';
 import { ETHTxProvider } from './eth';
-import { MUETxProvider } from './mue';
+import { AUDAXTxProvider } from './audax';
 import { XRPTxProvider } from './xrp';
 
 const providers = {
   BTC: new BTCTxProvider(),
   BCH: new BCHTxProvider(),
-  MUE: new MUETxProvider(),
+  AUDAX: new AUDAXTxProvider(),
   ETH: new ETHTxProvider(),
   ERC20: new ERC20TxProvider(),
   XRP: new XRPTxProvider()

@@ -1,17 +1,17 @@
 import _ from 'lodash';
 const Bitcore_ = {
   btc: require('bitcore-lib'),
-  bch: require('bitcore-lib-mue2')
+  bch: require('bitcore-audax-lib')
 };
 
-export class MUEAddressTranslator {
+export class AUDAXAddressTranslator {
   static getAddressCoin(address) {
     try {
       new Bitcore_['btc'].Address(address);
       return 'legacy';
     } catch (e) {
       try {
-        const a = new Bitcore_['mue'].Address(address);
+        const a = new Bitcore_['audax'].Address(address);
         if (a.toLegacyAddress() == address) return 'copay';
         return 'cashaddr';
       } catch (e) {
@@ -27,7 +27,7 @@ export class MUEAddressTranslator {
       wasArray = false;
       addresses = [addresses];
     }
-    from = from || MUEAddressTranslator.getAddressCoin(addresses[0]);
+    from = from || AUDAXAddressTranslator.getAddressCoin(addresses[0]);
 
     let ret;
     if (from == to) {
@@ -35,7 +35,7 @@ export class MUEAddressTranslator {
     } else {
       ret = _.filter(
         _.map(addresses, (x) => {
-          const bitcore = Bitcore_[from == 'legacy' ? 'btc' : 'mue'];
+          const bitcore = Bitcore_[from == 'legacy' ? 'btc' : 'audax'];
           let orig;
 
           try {
@@ -47,7 +47,7 @@ export class MUEAddressTranslator {
           if (to == 'cashaddr') {
             return Bitcore_['bch'].Address.fromObject(orig).toCashAddress(true);
           } else if (to == 'copay') {
-            return Bitcore_['mue'].Address.fromObject(orig).toLegacyAddress();
+            return Bitcore_['audax'].Address.fromObject(orig).toLegacyAddress();
           } else if (to == 'legacy') {
             return Bitcore_['btc'].Address.fromObject(orig).toString();
           }
@@ -59,4 +59,4 @@ export class MUEAddressTranslator {
   }
 }
 
-module.exports = MUEAddressTranslator;
+module.exports = AUDAXAddressTranslator;

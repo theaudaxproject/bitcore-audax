@@ -7,7 +7,7 @@ export const Paths = {
     mainnet: "m/44'/145'/",
     livenet: "m/44'/145'/"
   },
-  MUE: {
+  AUDAX: {
     mainnet: "m/44'/31'/",
     livenet: "m/44'/31'/"
   },

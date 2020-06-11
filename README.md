@@ -1,7 +1,7 @@
-# Bitcore-MUE
+# Bitcore-AUDAX
 ![Circle CI](https://circleci.com/gh/bitpay/bitcore/tree/master.svg?style=shield)
 
-**Infrastructure to build Bitcoin, MonetaryUnit and blockchain-based applications for the next generation of financial technology.**
+**Infrastructure to build Bitcoin, Audax and blockchain-based applications for the next generation of financial technology.**
 
 ## Getting Started
 
@@ -15,14 +15,14 @@
 
 
 ```sh
-git clone git@github.com:muecoin/bitcore-mue.git
+git clone git@github.com:theaudaxproject/bitcore-audax.git
 git checkout master
 npm install
 ```
 
 ## Setup Guide
 
-### 1. Setup MonetaryUnit config
+### 1. Setup Audax config
 
 <details>
 <summary>Example bitcore.config.json</summary>
@@ -40,7 +40,7 @@ npm install
       }
     },
     "chains": {
-      "MUE": {
+      "AUDAX": {
         "mainnet": {
           "chainSource": "p2p",
           "trustedPeers": [
@@ -52,8 +52,8 @@ npm install
           "rpc": {
             "host": "127.0.0.1",
             "port": 40009,
-            "username": "mue",
-            "password": "mue"
+            "username": "audax",
+            "password": "audax"
           }
         }
       }
@@ -64,10 +64,10 @@ npm install
 
 </details>
 
-### 2. Setup the MonetaryUnit Node
+### 2. Setup the Audax Node
 
 <details>
-<summary>Example MonetaryUnit Mainnet Config</summary>
+<summary>Example Audax Mainnet Config</summary>
 
 ```sh
 whitelist=127.0.0.1
@@ -78,25 +78,25 @@ irc=1
 upnp=1
 
 # Make sure port & rpcport matches the
-# bitcore.config.json ports for MUE mainnet
+# bitcore.config.json ports for AUDAX mainnet
 
 port=40008
 rpcport=40009
 rpcallowip=127.0.0.1
 
-rpcuser=mue
-rpcpassword=mue
+rpcuser=audax
+rpcpassword=audax
 ```
 
 </details>
 
-### 3. Run the MonetaryUnit node
+### 3. Run the Audax node
 
 <details>
-<summary>Example Starting a MonetaryUnit Node</summary>
+<summary>Example Starting an Audax Node</summary>
 
 ```sh
-monetaryunitd -daemon
+audaxd -daemon
 ```
 
 </details>

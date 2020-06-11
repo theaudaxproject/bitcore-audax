@@ -13,12 +13,12 @@ const BN = Bitcore.crypto.BN;
 var Bitcore_ = {
   btc: Bitcore,
   bch: require('crypto-wallet-core').BitcoreLibCash,
-  mue: require('crypto-wallet-core').BitcoreLibMue,
+  audax: require('crypto-wallet-core').BitcoreLibAudax,
 };
 var MAX_FEE_PER_KB = {
   btc: 10000 * 1000, // 10k sat/b
   bch: 10000 * 1000, // 10k sat/b
-  mue: 10000 * 1000, // 10k sat/b
+  audax: 10000 * 1000, // 10k sat/b
   eth: 50000000000 // 50 Gwei
 };
 
@@ -178,7 +178,7 @@ export class PayProV2 {
   /**
    * Sends an unsigned raw transaction to the server for verification of outputs and fee amount
    * @param {string} paymentUrl - the payment protocol specific url
-   * @param {string} chain - The cryptocurrency chain of the payment (BTC, BCH, MUE, ETH, etc)
+   * @param {string} chain - The cryptocurrency chain of the payment (BTC, BCH, AUDAX, ETH, etc)
    * @param {string} currency - When spending a token on top of a chain, such as GUSD on ETH this would be GUSD,
    * if no token is used this should be blank
    * @param [{tx: string, weightedSize: number}] unsignedTransactions - Hexadecimal format unsigned transactions

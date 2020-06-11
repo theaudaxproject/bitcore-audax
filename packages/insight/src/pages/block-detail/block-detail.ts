@@ -57,7 +57,7 @@ export class BlockDetailPage {
         if (
           this.chainNetwork.chain === 'BTC' ||
           this.chainNetwork.chain === 'BCH' ||
-          this.chainNetwork.chain === 'MUE'
+          this.chainNetwork.chain === 'AUDAX'
         ) {
           block = this.blocksProvider.toUtxoCoinAppBlock(response);
         }

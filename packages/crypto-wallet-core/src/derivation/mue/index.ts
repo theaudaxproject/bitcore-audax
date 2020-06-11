@@ -1,5 +1,5 @@
-const BitcoreLibMue = require('bitcore-lib-mue2');
+const BitcoreLibAudax = require('bitcore-audax-lib');
 import { AbstractBitcoreLibDeriver } from '../btc';
-export class MueDeriver extends AbstractBitcoreLibDeriver {
-  bitcoreLib = BitcoreLibMue;
+export class AudaxDeriver extends AbstractBitcoreLibDeriver {
+  bitcoreLib = BitcoreLibAudax;
 }

@@ -1,4 +1,4 @@
-# Configure Apache2 for MUE Insight Explorer on monetaryunit.org
+# Configure Apache2 for AUDAX Insight Explorer on audaxproject.io
 
 sites-enabled/000-default.conf
 ```sh
@@ -6,7 +6,7 @@ sites-enabled/000-default.conf
 #    ProxyPreserveHost On
 #    ProxyPass        "/" "http://localhost:8080/"
 #    ProxyPassReverse "/" "http://localhost:8080/"
-#    ServerName api.monetaryunit.org
+#    ServerName api.audaxproject.io
 #</VirtualHost>
 ```
 
@@ -16,7 +16,7 @@ sites-enabled/001.conf
     ProxyPreserveHost On
     ProxyPass        "/" "http://localhost:8080/"
     ProxyPassReverse "/" "http://localhost:8080/"
-    ServerName api.monetaryunit.org
+    ServerName api.audaxproject.io
 </VirtualHost>
 ```
 
@@ -26,14 +26,14 @@ sites-available/default-ssl.conf
 <IfModule>
 [...]
         <VirtualHost *:443>
-                ServerName api.monetaryunit.org
+                ServerName api.audaxproject.io
                 ProxyPreserveHost On
                 ProxyPass        "/" "http://localhost:3000/"
                 ProxyPassReverse "/" "http://localhost:3000/"
         </VirtualHost>
 
         <VirtualHost *:443>
-                ServerName explorer.monetaryunit.org
+                ServerName explorer.audaxproject.io
                 ProxyPreserveHost On
                 ProxyPass        "/" "http://localhost:8080/"
                 ProxyPassReverse "/" "http://localhost:8080/"

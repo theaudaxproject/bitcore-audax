@@ -1,14 +1,14 @@
 import { BitcoinP2PWorker } from '../bitcoin/p2p';
 import { BaseModule } from '..';
-import { MUEStateProvider } from '../../providers/chain-state/mue/mue';
+import { AUDAXStateProvider } from '../../providers/chain-state/audax/audax';
 import { VerificationPeer } from '../bitcoin/VerificationPeer';
 
-export default class MUEModule extends BaseModule {
+export default class AUDAXModule extends BaseModule {
   constructor(services) {
     super(services);
-    services.Libs.register('MUE', 'bitcore-lib-mue2', 'bitcore-p2p-mue');
-    services.P2P.register('MUE', BitcoinP2PWorker);
-    services.CSP.registerService('MUE', new MUEStateProvider());
-    services.Verification.register('MUE', VerificationPeer);
+    services.Libs.register('AUDAX', 'bitcore-audax-lib', 'bitcore-audax-p2p');
+    services.P2P.register('AUDAX', BitcoinP2PWorker);
+    services.CSP.registerService('AUDAX', new AUDAXStateProvider());
+    services.Verification.register('AUDAX', VerificationPeer);
   }
 }
