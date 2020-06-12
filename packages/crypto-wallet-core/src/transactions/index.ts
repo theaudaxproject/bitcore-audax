@@ -1,8 +1,8 @@
+import { AUDAXTxProvider } from './audax';
 import { BCHTxProvider } from './bch';
 import { BTCTxProvider } from './btc';
 import { ERC20TxProvider } from './erc20';
 import { ETHTxProvider } from './eth';
-import { AUDAXTxProvider } from './audax';
 import { XRPTxProvider } from './xrp';
 
 const providers = {

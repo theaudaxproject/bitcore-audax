@@ -1,7 +1,7 @@
+import { AudaxDeriver } from './audax';
 import { BchDeriver } from './bch';
 import { BtcDeriver } from './btc';
 import { EthDeriver } from './eth';
-import { AudaxDeriver } from './audax';
 import { Paths } from './paths';
 import { XrpDeriver } from './xrp';
 
