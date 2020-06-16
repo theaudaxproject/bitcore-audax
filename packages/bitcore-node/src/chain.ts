@@ -9,6 +9,6 @@ module.exports = {
   },
   AUDAX: {
     lib: require('bitcore-audax-lib'),
-    p2p: require('bitcore-audax-p2p'),
+    p2p: require('bitcore-audax2-p2p'),
   },
 }

@@ -15,12 +15,12 @@
           "trustedPeers": [
             {
               "host": "127.0.0.1",
-              "port": 40008
+              "port": 18200
             }
           ],
           "rpc": {
             "host": "127.0.0.1",
-            "port": 40009,
+            "port": 18201,
             "username": "audax",
             "password": "audax"
           }

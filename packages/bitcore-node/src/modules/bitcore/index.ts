@@ -6,7 +6,7 @@ import { VerificationPeer } from '../bitcoin/VerificationPeer';
 export default class AUDAXModule extends BaseModule {
   constructor(services) {
     super(services);
-    services.Libs.register('AUDAX', 'bitcore-audax-lib', 'bitcore-audax-p2p');
+    services.Libs.register('AUDAX', 'bitcore-audax-lib', 'bitcore-audax2-p2p');
     services.P2P.register('AUDAX', BitcoinP2PWorker);
     services.CSP.registerService('AUDAX', new AUDAXStateProvider());
     services.Verification.register('AUDAX', VerificationPeer);
